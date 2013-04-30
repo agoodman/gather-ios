@@ -1,0 +1,30 @@
+PODS:
+  - AFNetworking (1.1.0)
+  - MagicalRecord (2.1)
+  - RestKit (0.20.0):
+    - RestKit/Core
+  - RestKit/Core (0.20.0):
+    - RestKit/CoreData
+    - RestKit/Network
+    - RestKit/ObjectMapping
+  - RestKit/CoreData (0.20.0)
+  - RestKit/Network (0.20.0):
+    - AFNetworking (= 1.1.0)
+    - RestKit/ObjectMapping
+    - RestKit/Support
+    - SOCKit
+  - RestKit/ObjectMapping (0.20.0)
+  - RestKit/Support (0.20.0)
+  - SOCKit (1.1)
+
+DEPENDENCIES:
+  - MagicalRecord (~> 2.1)
+  - RestKit
+
+SPEC CHECKSUMS:
+  AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
+  MagicalRecord: 64e7184c240087a45e9588a722eaf05b0ad837f7
+  RestKit: 580771664a14eaaa40bf53cf83584f12fc141930
+  SOCKit: ed67aeeca4a697b63a933229e53f4670d5b9300f
+
+COCOAPODS: 0.18.1

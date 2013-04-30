@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FD0E34D58E24C558A203D74 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F962880BE394113B8BBD59E /* libPods.a */; };
 		7E07505F172F1590002A17B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E07505E172F1590002A17B2 /* UIKit.framework */; };
 		7E075061172F1590002A17B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E075060172F1590002A17B2 /* Foundation.framework */; };
 		7E075063172F1590002A17B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E075062172F1590002A17B2 /* CoreGraphics.framework */; };
@@ -18,9 +19,17 @@
 		7E075075172F1591002A17B2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E075074172F1591002A17B2 /* Default@2x.png */; };
 		7E075077172F1591002A17B2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E075076172F1591002A17B2 /* Default-568h@2x.png */; };
 		7E07507A172F1591002A17B2 /* Gather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E075078172F1591002A17B2 /* Gather.xcdatamodeld */; };
+		7E075084172F17A5002A17B2 /* MTKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E075083172F17A5002A17B2 /* MTKUser.m */; };
+		7E075087172F1837002A17B2 /* MTKFollower.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E075086172F1837002A17B2 /* MTKFollower.m */; };
+		7E07508A17300F1B002A17B2 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E07508917300F1B002A17B2 /* SignUpViewController.m */; };
+		7E07508D17300F4F002A17B2 /* Storyboard-Phone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E07508C17300F4F002A17B2 /* Storyboard-Phone.storyboard */; };
+		7E07509017301125002A17B2 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E07508F17301125002A17B2 /* StartViewController.m */; };
+		7E075093173013D3002A17B2 /* MTK.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E075092173013D3002A17B2 /* MTK.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D053FF5370D4280BC592B6F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		6F962880BE394113B8BBD59E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E07505B172F1590002A17B2 /* Gather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E07505E172F1590002A17B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7E075060172F1590002A17B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -36,6 +45,17 @@
 		7E075074172F1591002A17B2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7E075076172F1591002A17B2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7E075079172F1591002A17B2 /* Gather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gather.xcdatamodel; sourceTree = "<group>"; };
+		7E075082172F17A5002A17B2 /* MTKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTKUser.h; path = Matryoshka/MTKUser.h; sourceTree = "<group>"; };
+		7E075083172F17A5002A17B2 /* MTKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTKUser.m; path = Matryoshka/MTKUser.m; sourceTree = "<group>"; };
+		7E075085172F1837002A17B2 /* MTKFollower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTKFollower.h; path = Matryoshka/MTKFollower.h; sourceTree = "<group>"; };
+		7E075086172F1837002A17B2 /* MTKFollower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTKFollower.m; path = Matryoshka/MTKFollower.m; sourceTree = "<group>"; };
+		7E07508817300F1B002A17B2 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		7E07508917300F1B002A17B2 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		7E07508C17300F4F002A17B2 /* Storyboard-Phone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Storyboard-Phone.storyboard"; sourceTree = "<group>"; };
+		7E07508E17301125002A17B2 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		7E07508F17301125002A17B2 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		7E075091173013D3002A17B2 /* MTK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTK.h; path = Matryoshka/MTK.h; sourceTree = "<group>"; };
+		7E075092173013D3002A17B2 /* MTK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTK.m; path = Matryoshka/MTK.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +67,7 @@
 				7E075061172F1590002A17B2 /* Foundation.framework in Frameworks */,
 				7E075063172F1590002A17B2 /* CoreGraphics.framework in Frameworks */,
 				7E075065172F1590002A17B2 /* CoreData.framework in Frameworks */,
+				0FD0E34D58E24C558A203D74 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +77,11 @@
 		7E075052172F1590002A17B2 = {
 			isa = PBXGroup;
 			children = (
+				7E075080172F1776002A17B2 /* Matryoshka */,
 				7E075066172F1590002A17B2 /* Gather */,
 				7E07505D172F1590002A17B2 /* Frameworks */,
 				7E07505C172F1590002A17B2 /* Products */,
+				5D053FF5370D4280BC592B6F /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +100,7 @@
 				7E075060172F1590002A17B2 /* Foundation.framework */,
 				7E075062172F1590002A17B2 /* CoreGraphics.framework */,
 				7E075064172F1590002A17B2 /* CoreData.framework */,
+				6F962880BE394113B8BBD59E /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -84,10 +108,15 @@
 		7E075066172F1590002A17B2 /* Gather */ = {
 			isa = PBXGroup;
 			children = (
+				7E07508B17300F41002A17B2 /* Resources */,
 				7E07506F172F1591002A17B2 /* AppDelegate.h */,
 				7E075070172F1591002A17B2 /* AppDelegate.m */,
 				7E075078172F1591002A17B2 /* Gather.xcdatamodeld */,
 				7E075067172F1590002A17B2 /* Supporting Files */,
+				7E07508817300F1B002A17B2 /* SignUpViewController.h */,
+				7E07508917300F1B002A17B2 /* SignUpViewController.m */,
+				7E07508E17301125002A17B2 /* StartViewController.h */,
+				7E07508F17301125002A17B2 /* StartViewController.m */,
 			);
 			path = Gather;
 			sourceTree = "<group>";
@@ -106,6 +135,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7E075080172F1776002A17B2 /* Matryoshka */ = {
+			isa = PBXGroup;
+			children = (
+				7E075081172F1785002A17B2 /* Models */,
+				7E075091173013D3002A17B2 /* MTK.h */,
+				7E075092173013D3002A17B2 /* MTK.m */,
+			);
+			name = Matryoshka;
+			sourceTree = "<group>";
+		};
+		7E075081172F1785002A17B2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7E075082172F17A5002A17B2 /* MTKUser.h */,
+				7E075083172F17A5002A17B2 /* MTKUser.m */,
+				7E075085172F1837002A17B2 /* MTKFollower.h */,
+				7E075086172F1837002A17B2 /* MTKFollower.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7E07508B17300F41002A17B2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7E07508C17300F4F002A17B2 /* Storyboard-Phone.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E07507D172F1591002A17B2 /* Build configuration list for PBXNativeTarget "Gather" */;
 			buildPhases = (
+				2DC3F2C15B724EB3B2D2F12A /* Check Pods Manifest.lock */,
 				7E075057172F1590002A17B2 /* Sources */,
 				7E075058172F1590002A17B2 /* Frameworks */,
 				7E075059172F1590002A17B2 /* Resources */,
+				9B3A562C8A21442180B3758F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,10 +221,42 @@
 				7E075073172F1591002A17B2 /* Default.png in Resources */,
 				7E075075172F1591002A17B2 /* Default@2x.png in Resources */,
 				7E075077172F1591002A17B2 /* Default-568h@2x.png in Resources */,
+				7E07508D17300F4F002A17B2 /* Storyboard-Phone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DC3F2C15B724EB3B2D2F12A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sanbox is not in sync with the Podfile.lock. Run 'pod install'.\nEOM\n    exit 1\nfi\n";
+		};
+		9B3A562C8A21442180B3758F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7E075057172F1590002A17B2 /* Sources */ = {
@@ -174,6 +266,11 @@
 				7E07506D172F1590002A17B2 /* main.m in Sources */,
 				7E075071172F1591002A17B2 /* AppDelegate.m in Sources */,
 				7E07507A172F1591002A17B2 /* Gather.xcdatamodeld in Sources */,
+				7E075084172F17A5002A17B2 /* MTKUser.m in Sources */,
+				7E075087172F1837002A17B2 /* MTKFollower.m in Sources */,
+				7E07508A17300F1B002A17B2 /* SignUpViewController.m in Sources */,
+				7E07509017301125002A17B2 /* StartViewController.m in Sources */,
+				7E075093173013D3002A17B2 /* MTK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +348,7 @@
 		};
 		7E07507E172F1591002A17B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D053FF5370D4280BC592B6F /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Gather/Gather-Prefix.pch";
@@ -262,6 +360,7 @@
 		};
 		7E07507F172F1591002A17B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D053FF5370D4280BC592B6F /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Gather/Gather-Prefix.pch";
@@ -290,6 +389,7 @@
 				7E07507F172F1591002A17B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

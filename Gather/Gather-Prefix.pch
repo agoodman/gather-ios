@@ -13,3 +13,8 @@
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
 #endif
+
+#import <RestKit/RestKit.h>
+#import <CoreData+MagicalRecord.h>
+
+#define Alert(tTitle,tMsg) [[[UIAlertView alloc] initWithTitle:tTitle message:tMsg delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK",nil] show]
