@@ -25,6 +25,8 @@
 		7E07508D17300F4F002A17B2 /* Storyboard-Phone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E07508C17300F4F002A17B2 /* Storyboard-Phone.storyboard */; };
 		7E07509017301125002A17B2 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E07508F17301125002A17B2 /* StartViewController.m */; };
 		7E075093173013D3002A17B2 /* MTK.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E075092173013D3002A17B2 /* MTK.m */; };
+		7E33587A173051FB00B5C01F /* DiscoverableUsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E335879173051FB00B5C01F /* DiscoverableUsersViewController.m */; };
+		7E33587D1730568300B5C01F /* MTKDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E33587C1730568300B5C01F /* MTKDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,10 @@
 		7E07508F17301125002A17B2 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		7E075091173013D3002A17B2 /* MTK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTK.h; path = Matryoshka/MTK.h; sourceTree = "<group>"; };
 		7E075092173013D3002A17B2 /* MTK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTK.m; path = Matryoshka/MTK.m; sourceTree = "<group>"; };
+		7E335878173051FB00B5C01F /* DiscoverableUsersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverableUsersViewController.h; sourceTree = "<group>"; };
+		7E335879173051FB00B5C01F /* DiscoverableUsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverableUsersViewController.m; sourceTree = "<group>"; };
+		7E33587B1730568300B5C01F /* MTKDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTKDevice.h; path = Matryoshka/MTKDevice.h; sourceTree = "<group>"; };
+		7E33587C1730568300B5C01F /* MTKDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTKDevice.m; path = Matryoshka/MTKDevice.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,8 @@
 				7E07508917300F1B002A17B2 /* SignUpViewController.m */,
 				7E07508E17301125002A17B2 /* StartViewController.h */,
 				7E07508F17301125002A17B2 /* StartViewController.m */,
+				7E335878173051FB00B5C01F /* DiscoverableUsersViewController.h */,
+				7E335879173051FB00B5C01F /* DiscoverableUsersViewController.m */,
 			);
 			path = Gather;
 			sourceTree = "<group>";
@@ -152,6 +160,8 @@
 				7E075083172F17A5002A17B2 /* MTKUser.m */,
 				7E075085172F1837002A17B2 /* MTKFollower.h */,
 				7E075086172F1837002A17B2 /* MTKFollower.m */,
+				7E33587B1730568300B5C01F /* MTKDevice.h */,
+				7E33587C1730568300B5C01F /* MTKDevice.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -271,6 +281,8 @@
 				7E07508A17300F1B002A17B2 /* SignUpViewController.m in Sources */,
 				7E07509017301125002A17B2 /* StartViewController.m in Sources */,
 				7E075093173013D3002A17B2 /* MTK.m in Sources */,
+				7E33587A173051FB00B5C01F /* DiscoverableUsersViewController.m in Sources */,
+				7E33587D1730568300B5C01F /* MTKDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

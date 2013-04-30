@@ -31,7 +31,12 @@
 {
     [super viewWillAppear:animated];
     
-    if( ![MTK userSignedIn] ) {
+    if( [MTK userSignedIn] ) {
+        MTKUser* tUser = [MTK currentUser];
+        if( tUser.devices.count==0 ) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"RegisterDevice" object:nil];
+        }
+    }else{
         [self performSegueWithIdentifier:@"ShowSignIn" sender:self];
     }
 }

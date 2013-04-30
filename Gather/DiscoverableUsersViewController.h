@@ -1,5 +1,5 @@
 //
-//  StartViewController.h
+//  DiscoverableUsersViewController.h
 //  Gather
 //
 //  Created by Aubrey Goodman on 4/30/13.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StartViewController : UIViewController
+@interface DiscoverableUsersViewController : UITableViewController
 
--(IBAction)findFriends:(id)sender;
--(IBAction)startGathering:(id)sender;
+@property (strong) NSArray* users;
 
 @end

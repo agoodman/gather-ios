@@ -1,6 +1,6 @@
 //
 //  MTKUser.h
-//  Gather
+//  Matryoshka
 //
 //  Created by Aubrey Goodman on 4/29/13.
 //  Copyright (c) 2013 Migrant Studios. All rights reserved.
@@ -17,5 +17,7 @@
 @property (strong) NSNumber* longitude;
 @property BOOL discoverable;
 @property (strong) NSString* authenticationToken;
+@property (strong) NSSet* devices;
+@property (strong) NSSet* followers;
 
 @end

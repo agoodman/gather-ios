@@ -1,6 +1,6 @@
 //
 //  MTK.m
-//  Gather
+//  Matryoshka
 //
 //  Created by Aubrey Goodman on 4/30/13.
 //  Copyright (c) 2013 Migrant Studios. All rights reserved.
@@ -22,7 +22,9 @@
     NSFetchRequest* tFetch = [NSFetchRequest fetchRequestWithEntityName:@"User"];
     NSArray* tUsers = [tMgr.managedObjectStore.mainQueueManagedObjectContext executeFetchRequest:tFetch error:nil];
     if( tUsers.count>0 ) {
-        return [tUsers objectAtIndex:0];
+        MTKUser* tUser = [tUsers objectAtIndex:0];
+        [tMgr.HTTPClient setAuthorizationHeaderWithUsername:tUser.authenticationToken password:@"x"];
+        return tUser;
     }else{
         return nil;
     }
@@ -63,6 +65,51 @@
                  NSLog(@"sent request: %@",[[NSString alloc] initWithData:op.HTTPRequestOperation.request.HTTPBody encoding:NSUTF8StringEncoding]);
                  NSLog(@"received response: %@",op.HTTPRequestOperation.responseString);
                  aFailure([NSString stringWithFormat:@"%@",[error localizedRecoverySuggestion]]);
+             }];
+}
+
++ (void)findDiscoverableUsersSuccess:(ArrayBlock)aSuccess failure:(StringBlock)aFailure
+{
+    RKObjectManager* tMgr = [self manager];
+    [tMgr getObjectsAtPath:@"/users"
+                parameters:nil
+                   success:^(RKObjectRequestOperation* op, RKMappingResult* aResult) {
+                       NSArray* tUsers = aResult.array;
+                       aSuccess(tUsers);
+                   }
+                   failure:^(RKObjectRequestOperation* op, NSError* error) {
+                       NSLog(@"error retrieving discoverable users: %@",[error localizedRecoverySuggestion]);
+                       aFailure([NSString stringWithFormat:@"%@",[error localizedRecoverySuggestion]]);
+                   }];
+}
+
++ (void)followUserId:(NSNumber*)aUserId success:(dispatch_block_t)aSuccess failure:(dispatch_block_t)aFailure
+{
+    RKObjectManager* tMgr = [self manager];
+    [tMgr postObject:nil
+                path:@"/followers"
+          parameters:@{ @"follower" : @{ @"producer_id" : aUserId }}
+             success:^(RKObjectRequestOperation* op, RKMappingResult* aResult) {
+                 aSuccess();
+             }
+             failure:^(RKObjectRequestOperation* op, NSError* error) {
+                 NSLog(@"error creating follower: %@",[error localizedRecoverySuggestion]);
+                 aFailure();
+             }];
+}
+
++ (void)registerDeviceToken:(NSString *)aToken success:(dispatch_block_t)aSuccess failure:(dispatch_block_t)aFailure
+{
+    RKObjectManager* tMgr = [self manager];
+    [tMgr postObject:nil
+                path:@"/devices"
+          parameters:@{ @"device" : @{ @"token" : aToken, @"user_id" : [self currentUser].userId } }
+             success:^(RKObjectRequestOperation* op, RKMappingResult* aResult) {
+                 aSuccess();
+             }
+             failure:^(RKObjectRequestOperation* op, NSError* error) {
+                 NSLog(@"error registering device: %@",[error localizedRecoverySuggestion]);
+                 aFailure();
              }];
 }
 

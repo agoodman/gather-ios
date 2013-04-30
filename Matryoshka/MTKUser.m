@@ -1,6 +1,6 @@
 //
 //  MTKUser.m
-//  Gather
+//  Matryoshka
 //
 //  Created by Aubrey Goodman on 4/29/13.
 //  Copyright (c) 2013 Migrant Studios. All rights reserved.
@@ -10,6 +10,6 @@
 
 @implementation MTKUser
 
-@dynamic userId, email, password, latitude, longitude, discoverable, authenticationToken;
+@dynamic userId, email, password, latitude, longitude, discoverable, authenticationToken, devices, followers;
 
 @end

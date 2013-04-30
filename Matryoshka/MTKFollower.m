@@ -1,6 +1,6 @@
 //
 //  MTKFollower.m
-//  Gather
+//  Matryoshka
 //
 //  Created by Aubrey Goodman on 4/29/13.
 //  Copyright (c) 2013 Migrant Studios. All rights reserved.
@@ -10,6 +10,6 @@
 
 @implementation MTKFollower
 
-@dynamic followerId, consumerId, producerId;
+@dynamic followerId, consumerId, producerId, consumer, producer;
 
 @end

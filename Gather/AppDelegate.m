@@ -7,13 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import "MTK.h"
 
 
 @implementation AppDelegate
 
+- (void)registerDevice:(NSNotification*)aNotif
+{
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    RKLogConfigureByName("RestKit/*", RKLogLevelTrace);
+    RKLogConfigureByName("RestKit/*", RKLogLevelTrace);
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(registerDevice:) name:@"RegisterDevice" object:nil];
+    
     return YES;
 }
 
@@ -50,5 +58,29 @@
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
+
+#pragma mark - APNs
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSString* tRaw = [deviceToken description];
+    NSString* tToken = [[[tRaw stringByReplacingOccurrencesOfString:@"<" withString:@""] stringByReplacingOccurrencesOfString:@">" withString:@""] stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    [MTK registerDeviceToken:tToken
+                     success:^{}
+                     failure:^{
+                         Alert(@"Unable to register device", @"not sure why");
+                     }];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    if( [error code]==3010 ) {
+        Alert(@"Simulator Not Supported", @"You must run on a device");
+    }else{
+        Alert(@"Notifications Required", [error localizedDescription]);
+    }
+}
+
 
 @end
